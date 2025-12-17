@@ -17,14 +17,3 @@ ORDER BY ProductCount DESC --> denna vill jag använda mig av för visualisering
 
 
 
-///
-SELECT
-    pc.Name AS CategoryName,
-    psc.NAme AS SubcategoryName,
-    COUNT(DISTINCT p.ProductID) AS ProductCount
-  
-FROM Production.ProductCategory pc
-INNER JOIN Production.ProductSubcategory psc ON pc.ProductCategoryID = psc.ProductCategoryID
-INNER JOIN Production.Product p ON psc.ProductSubcategoryID = p.ProductSubcategoryID
-WHERE pc.Name = 'Bikes'
-GROUP BY pc.Name, psc.Name
