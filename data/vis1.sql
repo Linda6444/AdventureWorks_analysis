@@ -12,7 +12,7 @@ FROM Production.ProductCategory pc
 INNER JOIN Production.ProductSubcategory psc ON pc.ProductCategoryID = psc.ProductCategoryID
 INNER JOIN Production.Product p ON psc.ProductSubcategoryID = p.ProductSubcategoryID
 GROUP BY pc.Name
-ORDER BY ProductCount DESC --> denna vill jag använda mig av för visualisering
+ORDER BY ProductCount DESC;
 
 
 
