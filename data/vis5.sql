@@ -5,3 +5,4 @@ FROM Sales.SalesOrderDetail AS sod
 INNER JOIN Production.Product AS p ON sod.ProductID = p.ProductID
 GROUP BY p.Name
 ORDER BY TotalSales DESC;
+
